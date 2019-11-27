@@ -2,7 +2,7 @@ apiVersion: skaffold/v1beta11
 kind: Config
 build:
   artifacts:
-  - image: marketsummary
+  - image: springtrader-marketsummary
     context: .
 deploy:
   helm:
@@ -11,6 +11,6 @@ deploy:
         wait: true
         chartPath: ./charts/marketsummary
         values:
-          image: marketsummary
+          image: springtrader-marketsummary
         setValueTemplates:
           istioDomain: "{{.ISTIO_DOMAIN}}"
