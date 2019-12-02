@@ -8,7 +8,7 @@ deploy:
   helm:
     releases:
       - name: marketsummary
-        wait: true
+        wait: false
         chartPath: ./charts/marketsummary
         values:
           image: springtrader-marketsummary
